@@ -1,11 +1,11 @@
-package dao;
+package DB;
 
-import model.Dokter;
-import util.Koneksi;
 import java.sql.*;
 import java.util.*;
+import model.Dokter;
+import util.Koneksi;
 
-public class DokterDAO {
+public class DokterDB {
     public void insert(Dokter d) throws SQLException {
         String sql = "INSERT INTO dokter (nama, spesialis, no_telepon) VALUES (?, ?, ?)";
         try (Connection conn = Koneksi.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {

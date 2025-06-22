@@ -1,18 +1,16 @@
 package view;
 
-import dao.DokterDAO;
-import model.Dokter;
+import DB.DokterDB;
+import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import model.Dokter;
 
 public class DokterGUI extends JFrame {
     private JTable table;
     private DefaultTableModel model;
     private JTextField txtNama, txtSpesialis, txtNoTelepon;
-    private DokterDAO dao = new DokterDAO();
+    private DokterDB dao = new DokterDB();
     private int selectedId = -1;
 
     public DokterGUI() {
