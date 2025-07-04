@@ -5,7 +5,7 @@ import util.Koneksi;
 import java.sql.*;
 import java.util.*;
 
-public class ResepDAO {
+public class ResepDB {
     public void insert(Resep r) throws SQLException {
         String sql = "INSERT INTO resep (id_kunjungan, nama_obat, dosis) VALUES (?, ?, ?)";
         try (Connection conn = Koneksi.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {

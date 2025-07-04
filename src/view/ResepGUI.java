@@ -1,18 +1,16 @@
 package view;
 
-import DB.ResepDAO;
-import model.Resep;
+import DB.ResepDB;
+import java.awt.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.*;
+import model.Resep;
 
 public class ResepGUI extends JFrame {
     private JTable table;
     private DefaultTableModel model;
     private JTextField txtIdKunjungan, txtNamaObat, txtDosis;
-    private ResepDAO dao = new ResepDAO();
+    private ResepDB dao = new ResepDB();
     private int selectedId = -1;
 
     public ResepGUI() {
